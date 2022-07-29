@@ -4,15 +4,15 @@ return {
      require('neorg').setup {
        load = {
          ["core.defaults"] = {},
-         --["core.norg.dirman"] = {
-           --workspaces = {
-             --home = "~/notes/home",
-           --}
-         --}
        }
      }
     end
   },
+  ['williamboman/mason.nvim'] = {
+    config = function()
+      require("mason").setup()
+    end
+  }
   ['max397574/better-escape.nvim'] = {
     config = function()
     require("better_escape").setup()
@@ -30,5 +30,10 @@ return {
         ['*'] = require('distant.settings').chip_default()
       }
     end
+  },
+  ['ggandor/lightspeed.nvim'] = {
+     config = function()
+        require("lightspeed").setup()
+     end
   }
 }
