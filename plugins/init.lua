@@ -8,11 +8,6 @@ return {
      }
     end
   },
-  ['williamboman/mason.nvim'] = {
-    config = function()
-      require("mason").setup()
-    end
-  }
   ['max397574/better-escape.nvim'] = {
     config = function()
     require("better_escape").setup()
@@ -31,9 +26,5 @@ return {
       }
     end
   },
-  ['ggandor/lightspeed.nvim'] = {
-     config = function()
-        require("lightspeed").setup()
-     end
-  }
+  ['ggandor/lightspeed.nvim'] = {}
 }
