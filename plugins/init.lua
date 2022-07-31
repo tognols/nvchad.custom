@@ -26,5 +26,36 @@ return {
       }
     end
   },
-  ['ggandor/lightspeed.nvim'] = {}
+  ['ggandor/lightspeed.nvim'] = {},
+
+  -- Fixing the lsp for once
+  ["neovim/nvim-lspconfig"] = {
+      config = function()
+        require "plugins.configs.lspconfig"
+        require "custom.plugins.lspconfig"
+      end,
+  },
+ ["williamboman/mason.nvim"] = {
+      ensure_installed = {
+        -- modified from siduck's config
+        -- lua stuff
+        "lua-language-server",
+        "stylua",
+
+        -- web dev
+        "css-lsp",
+        "html-lsp",
+        "typescript-language-server",
+        "deno",
+        "emmet-ls",
+        "json-lsp",
+
+        -- shell
+        "shfmt",
+        "shellcheck",
+
+        -- cpp
+        "clangd",
+      },
+    },
 }
