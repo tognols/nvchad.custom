@@ -6,5 +6,6 @@ vim.g.neovide_cursor_vfx_mode = "railgun"
 vim.g.neovide_refresh_rate = 144
 vim.g.neovide_remember_window_size = true
 vim.cmd([[set guifont=Consolas \NF\ r:16]])
+vim.cmd([[set clipboard+=unnamedplus]])
 
 return M

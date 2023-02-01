@@ -43,6 +43,15 @@ return {
         "clangd",
         -- rust
          "rust-analyzer",
+
+        -- svelte,
+        "svelte-language-server",
         },
     },
+  ["kevinhwang91/nvim-ufo"] = {
+    require = "kevinhwang91/promise-async",
+    config = function ()
+      require("ufo").setup()
+    end
+  },
 }
